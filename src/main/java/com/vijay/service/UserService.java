@@ -7,6 +7,7 @@ import java.util.Optional;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.vijay.DTO.UserDTO;
@@ -23,6 +24,9 @@ public class UserService {
 	private static final Logger logger = LogManager.getLogger(UserService.class);
 	
 	@Autowired
+	PasswordEncoder passwordEncoder;
+	
+	@Autowired
 	private UserRepository userRepository;
 
 	public UserEntity createUser(UserDTO userDTO) throws IOException{
@@ -37,11 +41,11 @@ public class UserService {
 		} else {
 			userEntity.setFullName(userDTO.getFullName());
 			userEntity.setMobileNo(userDTO.getMobileNo());
-			userEntity.setRole("user");
+			userEntity.setRole(userDTO.getRole().toUpperCase());
 			userEntity.setEmail(userDTO.getEmail().toLowerCase());
 			userEntity.setAddress(userDTO.getAddress());
 			userEntity.setUsername(userDTO.getUsername());
-			userEntity.setPassword(userDTO.getPassword());
+			userEntity.setPassword(passwordEncoder.encode(userDTO.getPassword()));
 			return userRepository.save(userEntity);
 		}
 	}
