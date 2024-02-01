@@ -24,13 +24,13 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("user")
-//@PreAuthorize("hasAuthority('USER')")
+@PreAuthorize("hasAuthority('USER')")
 public class BookingController {
 	
 	@Autowired
 	BookingService bookingService;
 	
-	@PostMapping("booking")
+	@PostMapping("addbooking")
 	public BookingEntity createBooking(@RequestBody BookingDTO bookingDTO){
 		return bookingService.createBooking(bookingDTO);
 	}

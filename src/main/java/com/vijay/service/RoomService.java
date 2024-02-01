@@ -37,7 +37,7 @@ public class RoomService {
 		return roomRepository.findAll();
 	}
 
-	//Exception Handling is not done here
+	//Exception Handling is not done here check UserService
 	
 	public RoomEntity updateRoom(Long id, RoomDTO roomDTO) {
 

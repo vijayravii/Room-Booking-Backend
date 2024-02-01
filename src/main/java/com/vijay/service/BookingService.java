@@ -53,6 +53,8 @@ public class BookingService {
 	public List<BookingEntity> getBooking() {
 		return bookingRepository.findAll();
 	}
+	
+	//Exception Handling is not done here check UserService
 
 	public BookingEntity editBooking(Long id, BookingDTO bookingDTO) {
 		
