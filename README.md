@@ -5,9 +5,11 @@ Room Booking Application - Oracle Tech
 
 **Java Developer - Spring Boot - Rest Api**
 
+***LinkedIn : https://linkedin.com/in/vijayravii***
+
 ## Overview
 
-- Room Booking Software that enables you to create and manage user and RoomBooking Option
+- Room Booking Software that enables you to create and manage user and RoomBooking feautures
 
 ## Tools Used
 
@@ -24,3 +26,16 @@ Room Booking Application - Oracle Tech
 2. Spring MVC : Model View Controller by Spring
 3. Angular : View layer - On process
 
+## Api Document
+
+Google Docs Link : https://docs.google.com/document/d/16qLh3dIzsVV6JEbISpmQ00EkHwZjjuP3l5NbmGIt8UI/edit?usp=sharing
+
+## Planning and Design
+
+Miro Link : https://miro.com/app/board/uXjVN0-83_k=/?share_link_id=808847617618
+
+## Notes
+
+1. Restful Api Application designed with MVC Architecture
+2. **User Module** enabled with Validations, Exceptions and Logic.
+3. This application enabled with port no : 9000
