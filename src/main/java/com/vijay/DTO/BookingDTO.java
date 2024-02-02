@@ -7,8 +7,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Data
-@Getter
-@Setter
 public class BookingDTO {
 	
 	private Integer roomNo;

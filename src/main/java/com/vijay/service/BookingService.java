@@ -16,6 +16,7 @@ import com.vijay.repository.BookingRepository;
 import com.vijay.repository.RoomRepository;
 
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 public class BookingService {
@@ -44,7 +45,7 @@ public class BookingService {
 			roomEntity.setStatus("Occupied");
 			roomRepository.save(roomEntity);
 		} else {
-			System.out.println("Cannot update the Status");
+			logger.info("Cannot update the Status");
 		}
 		return bookingRepository.save(bookingEntity);
 	}
